@@ -80,7 +80,8 @@ juan@juan-Pc:~$ find -name Documentos -prune -o -name \*.txt
 
    script find_duplicates.sh 
    `` #!bin/bash``
-   md5sum *| sort | uniq -w33 -D
+   
+   ``md5sum *| sort | uniq -w33 -D``
 
 el script toma la suma de control (md5sum)de los ficheros en una carpeta, y cuando encuentra sumas iguales para dos archivos éste devuelve la suma y los nombres de los archivos.
 Referencia:`` J. S. Pons, «El Sotanillo de Juan Sierra Pons,» 2006. [En línea]. Available: http://www.elsotanillo.net/2006/10/linux-script-bash-para-encontrar-ficheros-duplicados-con-diferentes-nombres-en-el-mismo-directorio-2/. [Último acceso: 2 02 2015]``
