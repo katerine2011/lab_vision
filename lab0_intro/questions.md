@@ -79,6 +79,7 @@ juan@juan-Pc:~$ find -name Documentos -prune -o -name \*.txt
     Save this script as ``find_duplicates.sh`` in this directory and commit your changes to github
 
    script find_duplicates.sh 
+   
    `` #!bin/bash``
    
    ``md5sum *| sort | uniq -w33 -D``
