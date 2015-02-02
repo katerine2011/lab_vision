@@ -23,7 +23,7 @@
 4.  What does the ``-prune`` option of ``find`` do? Give an example
     >   Prune es una acción dentro de find para evitar o excluir en la búsqueda archivos que se quieren ignorar. Por ejemplo:
 
-juan@juan-Pc:~$ find -name  \*.txt 
+``juan@juan-Pc:~$ find -name  \*.txt ``
 ./unixkatstuff/science.txt 
 ./.config/libreoffice/4/user/uno_packages/cache/log.txt 
 ./.config/google-chrome/Default/Pepper Data/Shockwave Flash/CacheWritableAdobeRoot/AssetCache/VWMT94YU/cacheSize.txt 
@@ -35,7 +35,7 @@ juan@juan-Pc:~$ find -name  \*.txt
 ./Documentos/fichero.txt 
 ./.mozilla/firefox/c3o6ile7.default/urlclassifierkey3.txt 
 
-juan@juan-Pc:~$ find -name Documentos -prune -o -name \*.txt 
+``juan@juan-Pc:~$ find -name Documentos -prune -o -name \*.txt ``
 ./unixkatstuff/science.txt 
 ./.config/libreoffice/4/user/uno_packages/cache/log.txt 
 ./.config/google-chrome/Default/Pepper Data/Shockwave Flash/CacheWritableAdobeRoot/AssetCache/VWMT94YU/cacheSize.txt 
