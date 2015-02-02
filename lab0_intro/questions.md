@@ -54,7 +54,7 @@ juan@juan-Pc:~$ find -name Documentos -prune -o -name \*.txt
     >   answer
 
 8.  What does the ``cut`` command do?
-    >   cut saca información específica de un archivo de texto 
+    >   cut saca información específica línea a línea de un archivo de texto 
 
 9.  What does the ``wget`` command do?
     >   wget descarga archivos de un url específico
