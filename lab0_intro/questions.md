@@ -151,5 +151,6 @@ Referencia:`` J. S. Pons, «El Sotanillo de Juan Sierra Pons,» 2006. [En línea
     >   Da la orden al script para que entieneda que bash es el lenguaje en el que se va a trabajar
 
 17. How many unique images are in the ``sipi_images`` folder?
-    >   answer
+    >  `` md5sum *| sort | uniq -w33 | wc -l``
+         214 imágenes son unicas
     
