@@ -5,9 +5,7 @@
 
 2.  What is the output of the ``cal`` command?
 
-        multi
-        line
-        answer
+    >cal muestra el calendario
 
 # Homework Questions
 
@@ -47,11 +45,11 @@
 5.  Where is the file ``xxxxxx``
     >   /usr/src/linux-headers-3.13.0-37-generic/include/config/blk/dev/3w/xxxx
 
-6.  How many files with ``gnu`` in its name are in ``dir``
-    >   answer
+6.  How many files with ``gnu`` in its name are in ``/usr/src​``
+    >no hay ningun arcchivo gnu en ``/usr/src``, si hay en usr 2 archivos gnu
 
-7.  How many files contain ``gpl`` inside in ``dir``
-    >   answer
+7.  How many files contain ``gpl`` inside in ``/usr/src​``
+    >  no hay ningun arcchivo gpl en ``/usr/src``, si hay en usr 23 archivos gpl
 
 8.  What does the ``cut`` command do?
     >   cut saca información específica línea a línea de un archivo de texto 
@@ -63,16 +61,77 @@
     >   diff compara ficheros línea por línea
 
 11.  How many users exist in *Guitaca*?
-    >   hay 48 usuarios en guitaca
+    >   cat /etc/passwd | wc -l
+        hay 48 usuarios en guitaca
+        
+        con who en usuarios conectados aparecen 8 usuarios
+
 
 12. What command will produce a table of Users and Shells sorted by shell (tip: using ``cut`` and ``sort``)
-    >   answer
+    >   cat /etc/passwd | cut -d ":" -f1,7 | sort
+
+
+abrt:/sbin/nologin
+adm:/sbin/nologin
+akmods:/sbin/nologin
+apache:/sbin/nologin
+avahi-autoipd:/sbin/nologin
+avahi:/sbin/nologin
+backuppc:/sbin/nologin
+bin:/sbin/nologin
+chrony:/sbin/nologin
+colord:/sbin/nologin
+daemon:/sbin/nologin
+dbus:/sbin/nologin
+ftp:/sbin/nologin
+games:/sbin/nologin
+gdm:/sbin/nologin
+geoclue:/sbin/nologin
+gnome-initial-setup:/sbin/nologin
+halt:/sbin/halt
+hsqldb:/sbin/nologin
+imagine:/bin/bash
+lp:/sbin/nologin
+mail:/sbin/nologin
+mysql:/sbin/nologin
+nfsnobody:/sbin/nologin
+nm-openconnect:/sbin/nologin
+nobody:/sbin/nologin
+openvpn:/sbin/nologin
+operator:/sbin/nologin
+polkitd:/sbin/nologin
+pulse:/sbin/nologin
+qemu:/sbin/nologin
+radvd:/sbin/nologin
+root:/bin/bash
+rpc:/sbin/nologin
+rpcuser:/sbin/nologin
+rtkit:/sbin/nologin
+saslauth:/sbin/nologin
+shutdown:/sbin/shutdown
+squid:/sbin/nologin
+sshd:/sbin/nologin
+sync:/bin/sync
+tcpdump:/sbin/nologin
+tss:/sbin/nologin
+unbound:/sbin/nologin
+usbmuxd:/sbin/nologin
+vafus:/bin/bash
+vision:/bin/bash
+webalizer:/sbin/nologin
 
 13. What command will produce the number of users with shell ``/sbin/nologin`` (tip: using ``grep`` and ``wc``)
     >   answer
 
 14.  What is the name of the linux distribution running on *Guitaca*?
-    >   answer
+
+    ``cd /etc``
+    ``cat issue``
+    fedora release 20 (Heisenbug)
+    kernel \r on an \m (\l)
+    
+    ``cat /proc/version``
+    Linux version 3.17.8-200.fc20.x86_64 (mockbuild@bkernel02.phx2.fedoraproject.org) (gcc version 4.8.3 20140911 (Red Hat 4.8.3-7) (GCC) ) #1 SMP Thu Jan 8 23:26:57 UTC 2015
 
 15. Create a script for finding duplicate images based on their content (tip: hash or checksum)
     You may look in the internet for ideas, but please indicate the source of any code you use
@@ -80,6 +139,7 @@
 
    script find_duplicates.sh 
    
+   ``$`` sh find_duplicates.sh
    `` #!bin/bash``
    
    ``md5sum *| sort | uniq -w33 -D``
@@ -88,7 +148,7 @@ el script toma la suma de control (md5sum)de los ficheros en una carpeta, y cuan
 Referencia:`` J. S. Pons, «El Sotanillo de Juan Sierra Pons,» 2006. [En línea]. Available: http://www.elsotanillo.net/2006/10/linux-script-bash-para-encontrar-ficheros-duplicados-con-diferentes-nombres-en-el-mismo-directorio-2/. [Último acceso: 2 02 2015]``
 
 16. What is the meaning of ``#! /bin/bash`` at the start of scripts?
-    >   da la orden al script para que entieneda que bash es el lenguaje en el que se va a trabajar
+    >   Da la orden al script para que entieneda que bash es el lenguaje en el que se va a trabajar
 
 17. How many unique images are in the ``sipi_images`` folder?
     >   answer
