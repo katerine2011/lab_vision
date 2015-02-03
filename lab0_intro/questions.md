@@ -1,7 +1,7 @@
 # Warmup Questions
 
 1.  What is the clone url of this repository?
-    >   answer
+    >   https://github.com/katerine2011/lab_vision.git
 
 2.  What is the output of the ``cal`` command?
 
@@ -121,7 +121,7 @@ vision:/bin/bash
 webalizer:/sbin/nologin
 
 13. What command will produce the number of users with shell ``/sbin/nologin`` (tip: using ``grep`` and ``wc``)
-    >   answer
+    >   grep /sbin/nologin passwd |wc -l
 
 14.  What is the name of the linux distribution running on *Guitaca*?
 
