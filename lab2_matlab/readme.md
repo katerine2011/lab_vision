@@ -81,12 +81,12 @@ The [imread](http://www.mathworks.com/help/matlab/ref/imread.html) command is us
     
     What is the dimension of the output?
 
-    >   Answer
+    >   size = 1x2 class double 
 
 3.  Read the ``4.2.03`` image
     What is the dimension of the output?
 
-    >   Answer
+    >   size =1x2 
 
 ## Displaying Images
 
@@ -99,7 +99,7 @@ The following commands can be used for displaying images
 2.  Try displaying the images read in the previous point using both commands
 3.  What are the differences?
 
-    >   Answer
+    >   Image muestra la matriz de información como una imagen con coordenadas o plano y permite variar las dimesiones de la imagen al ampliar la pantalla, imshow muestra la imagen manteniendo las dimensiones, sin cambiar la estructura de los pixeles. 
 
 ## Writing Images
 
