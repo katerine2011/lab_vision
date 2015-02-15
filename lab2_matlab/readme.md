@@ -81,12 +81,12 @@ The [imread](http://www.mathworks.com/help/matlab/ref/imread.html) command is us
     
     What is the dimension of the output?
 
-    >   size = 1x2 class double 
+    >   size = 256x256 class uint8 
 
 3.  Read the ``4.2.03`` image
     What is the dimension of the output?
 
-    >   size =1x2 
+    >   size = 512x512x3 class uint8 
 
 ## Displaying Images
 
@@ -99,7 +99,7 @@ The following commands can be used for displaying images
 2.  Try displaying the images read in the previous point using both commands
 3.  What are the differences?
 
-    >   Image muestra la matriz de información como una imagen con coordenadas o plano y permite variar las dimesiones de la imagen al ampliar la pantalla, imshow muestra la imagen manteniendo las dimensiones, sin cambiar la estructura de los pixeles. 
+    >   ``Image`` muestra la matriz de información como una imagen con coordenadas o plano y permite variar las dimesiones de la imagen al ampliar la pantalla, ``imshow`` muestra la imagen manteniendo las dimensiones, sin cambiar la estructura de los pixeles. Por otro lado imshow muestra la figura como una gráfica, ``image`` muestra la información de la matriz como imagen y cada elemento de color es representado en un ``colormap``
 
 ## Writing Images
 
@@ -150,7 +150,7 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
 3.  Try saving noisy images as jpg, what happens?
 
-    > Answer
+    > Al aplicarle ruido gausiano a una imagen RGB y guardarla en dos formatos distintos (tiff y jpg), se evidencia que a pesar de que las dimensiones son las mismas para las imágenes guardadas el tamaño en memoria cambia (png más pequeña), luego al observar en detalle las imágenes se observa que la imagen en formato png se percibe con una perdida en la resolución y por ello aparenta tener más ruido. 
 
 ### Median filter
 
@@ -164,7 +164,7 @@ These filters can be applied to a an image in order to remove noise.
 3.  Try different sizes for the filters
 4.  Which filter works best for salt & pepper noise?
 
-    > Answer
+    > El mejor filtro para una imagen con ruido sal y pimienta es el filtro de la mediana que trae por defecto Matlab porque al variar las dimensiones (matriz cuadrada ``nxn``) para ``n=1`` y ``n=2`` aún se percibía ruido y en ``n=3y4`` la imagen mejoraba pero no de la misma manera que al aplicar solo ``mediana1=medfilt2(J1) %J1 imagen con ruido sal y pimienta``. Los demás filtros no quitaban ek ruido o suavizaban mucho la imagen.
 
 For more on noise removal read http://www.mathworks.com/help/images/noise-removal.html
 
