@@ -177,7 +177,7 @@ which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fs
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
-    > Se realizó una variación del tamaño de de los filtro desde 1x1 hasta 15x15 de dos en dos y se encontró que si en el filtro de la gausiana no se varía el sigma que trae por defecto (0.5) el suavizado no se nota mucho comparando los filtros gaussianos de diferentes tamaños. si se aumenta el sigma y también se aumenta el tamaño hasta máximo [10 10] y sigma =10 se tiene el mismo efecto de muy poco suavizado con respecto al filtro promedio. Para tener un suavizado notorio es necesario aumentar el tamaño por encima de n=10 y sigma mayor a 15, dado que el filtro gausiano le da mayor peso a píxel central y valores muy pequeños a los píxeles más aleados. 
+    > Se realizó una variación del tamaño de de los filtro desde 1x1 hasta 15x15 de dos en dos y se encontró que si en el filtro de la gausiana no se varía el sigma que trae por defecto (0.5) el suavizado no se nota mucho comparando los filtros gaussianos de diferentes tamaños. si se aumenta el sigma y también se aumenta el tamaño hasta máximo [10 10] y sigma =10 se tiene el mismo efecto de muy poco suavizado con respecto al filtro promedio. Para tener un suavizado notorio es necesario aumentar el tamaño por encima de n=10 y sigma mayor a 15, dado que el filtro gausiano le da mayor peso a píxel central y valores muy pequeños a los píxeles más aislados. 
 
 ### Sharpen
 
@@ -204,7 +204,7 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
 1.  Try applying this filters
 2.  What is the difference between prewitt and sobel?
 
-    > Sobel mantiene una intesidad mayor en los bordes detectados y aparentemente sobel contiene más bordes detectados.
+    > Sobel mantiene una intesidad mayor en los bordes detectados y aparentemente sobel contiene más bordes detectados. Aunque visualmente no parecen tener mucha diferencias.
 
 More sophisticated methods for finding edges can be found in the following pages
     -   http://www.mathworks.com/discovery/edge-detection.html
@@ -303,13 +303,13 @@ The [norm2corrx](http://www.mathworks.com/help/images/ref/normxcorr2.htm) can be
     ```
 6.  Explain what the above code does
 
-    > 1. lee la imagen en 2D y con la función ``imcrop`` se seleciona un ``template`` de la imagen original(con las dimensiones y en el lugar que se desee). 2). con ``c=normxcorr2(train,image)`` se realiza la correlación cruzada de la imagen con el template y entrega valores entre -1 y 1. La imagen queda más grande 3).se extraen las dimensiones de la imagen dividida en 2 y se toma la parte entera más cercana al tamaño. 4). ``c2=c(dx+1:sx+dx,dy+1:sy+dy)`` se construye la matriz con las correlaciones con el tamaño adecuado(igual a la imagen original) y luego se acentua los niveles de correlación(``c3=c2.^3``). 5). Normaliza la matriz de correlación entre 0 y 1 ``cr=0.5+0.5*c3`` para representar uno de los componentes de crominacia, luego ``y=mat2gray(image)`` para estraer y representar los niveles de luminancia y ``cb=0.5*ones(size(image))`` para el otro canal de corminacia que en este caso es un plano de gris. 6). la función cat concatena los planos de color para obtener la representación ``ycbcr=cat(3,y,cb,cr)`` y luego transformarlo en rgb ``rgb=ycbcr2rgb(ycbcr)`` y por ultimo se grafica. Con este método se encuentra en una imagen en 2D el template con la ubicacion de valores de crominancia mayor sobre la imagen.
+    > 1. lee la imagen en 2D y con la función ``imcrop`` se selecciona un ``template`` de la imagen original (con las dimensiones y en el lugar que se desee). 2). con ``c=normxcorr2(train,image)`` se realiza la correlación cruzada de la imagen con el template y entrega valores entre -1 y 1. La imagen queda más grande 3).se extraen las dimensiones de la imagen dividida en 2 y se toma la parte entera más cercana al tamaño. 4). ``c2=c(dx+1:sx+dx,dy+1:sy+dy)`` se construye la matriz con las correlaciones con el tamaño adecuado(igual a la imagen original) y luego se acentúa los niveles de correlación(``c3=c2.^3``). 5). Normaliza la matriz de correlación entre 0 y 1 ``cr=0.5+0.5*c3`` para representar uno de los componentes de crominancia, luego ``y=mat2gray(image)`` para extraer y representar los niveles de luminancia y ``cb=0.5*ones(size(image))`` para el otro canal de crominancia que en este caso es un plano de gris. 6). la función cat concatena los planos de color para obtener la representación ``ycbcr=cat(3,y,cb,cr)`` y luego transformarlo en rgb ``rgb=ycbcr2rgb(ycbcr)`` y por último se gráfica. Con este método se encuentra en una imagen en 2D el template con la ubicación de valores de crominancia mayor sobre la imagen.
     
 7.  Now lets find the train in the next frame, read image ``motion05.512.tiff``.
 8.  Apply the procedure written above to it (use the train template from the past frame)
 9.  What are the limitations of this method?
 
-    > As limitaciones del método son: 1. Necesitamos seleccionar el template, además dicho template debe tener diferencias en contraste significativas con otras partes de la imagen, dado que si tomamos un objeto con valores de gris similar a partes de la imagen seguramente no encontraremos lo que esperábamos (ejemplo: al seleccionar el carro con la parte blanca la mayoría de los píxeles conicidian con valores cercanos en correlación que las nubes o el bus ) por basarse en la correlación cruzada.  
+    > Las limitaciones del método son: 1. Necesitamos seleccionar el template, además dicho template debe tener diferencias en contraste significativas con otras partes de la imagen, dado que si tomamos un objeto con valores de gris similar a partes de la imagen seguramente no encontraremos lo que esperábamos (ejemplo: al seleccionar el carro con la parte blanca la mayoría de los píxeles coincidían con valores cercanos en correlación que las nubes o el bus ) por basarse en la correlación cruzada.  
 
 See [here](http://www.mathworks.com/help/images/examples/registering-an-image-using-normalized-cross-correlation.html)
 another example.
