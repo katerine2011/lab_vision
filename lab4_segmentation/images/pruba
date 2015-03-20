@@ -1,0 +1,16 @@
+
+%options= statset('MaxIter','100');
+A=imread('2018.jpg');
+B=rgb2hsv(A);
+A=hsv2rgb(B);
+C=A(:,1,1); 
+outspace = space2cluster(A,'hsv');
+option=statset('Display','final')
+gm=fitgmdist(C,5,'Regularize',le-5);
+ee=cluster(gm,C);
+   options = statset( 'Display', 'final');
+   gmm = fitgmdist(outspace,number_of_clusters,'Options', options, 'Regularize',0.1);
+   Clus=cluster(gmm,outspace);
+   matrix_out = reshape(Clus,x,y);
+
+p=gm.mu;

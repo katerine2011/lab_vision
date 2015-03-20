@@ -19,7 +19,7 @@ Mat_position_x =repmat(x1,x,1);
 
 y1=1:x;
 Mat_position_y =repmat(y1',1,y);
-
+a
 matrix_out(:,1)=reshape(Im(:,:,1),x*y,1);
 matrix_out(:,2)=reshape(Im(:,:,2),x*y,1);
 matrix_out(:,3)=reshape(Im(:,:,3),x*y,1);
