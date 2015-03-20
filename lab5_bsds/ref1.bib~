@@ -1,0 +1,40 @@
+@article{RODRIGUEZ1997,
+   title = {{Métodos de segmentación de imagen aplicados a las lesiones arteriales: I. Comparación}},
+   journal = {{Revista Cubana de Investigaciones Biomédicas}},
+   author={Rodrígez, Roberto AND Fernández-Britto, José E. AND Alarcón, Teresa E AND Gusk, Hans AND Taylor, Charles},
+   ISSN = {0864-0300},
+   language = {es},
+   URL = {http://scielo.sld.cu/scielo.php?script=sci_arttext&pid=S0864-03001997000100010&nrm=iso},
+   volume = {16},
+   year = {1997},
+   month = {06},
+   pages = {58 - 62},
+   publisher = {scielocu},
+   }
+
+@INPROCEEDINGS{1633722, 
+author={Ng, H.P. and Ong, S.H. and Foong, K.W.C. and Goh, P.S. and Nowinski, W.L.}, 
+booktitle={Image Analysis and Interpretation, 2006 IEEE Southwest Symposium on}, 
+title={Medical Image Segmentation Using K-Means Clustering and Improved Watershed Algorithm}, 
+year={2006}, 
+month={}, 
+pages={61-65}, 
+keywords={gradient methods;image segmentation;medical image processing;pattern clustering;unsupervised learning;automated thresholding;gradient magnitude map;k-means clustering;medical image segmentation;unsupervised learning algorithm;watershed segmentation algorithm;Biomedical imaging;Clustering algorithms;Image edge detection;Image segmentation;Medical diagnostic imaging;Partitioning algorithms;Pixel;Rain;Surface morphology;Surface topography}, 
+doi={10.1109/SSIAI.2006.1633722},}
+
+
+@ARTICLE{5071225, 
+author={Fripp, J. and Crozier, S. and Warfield, S.K. and Ourselin, S.}, 
+journal={Medical Imaging, IEEE Transactions on}, 
+title={Automatic Segmentation and Quantitative Analysis of the Articular Cartilages From Magnetic Resonance Images of the Knee}, 
+year={2010}, 
+month={Jan}, 
+volume={29}, 
+number={1}, 
+pages={55-64}, 
+keywords={biomedical MRI;bone;feature extraction;image classification;image registration;image segmentation;medical image processing;3D active shape model;absolute Laplacian thickness difference;articular cartilages;automatic image segmentation;average Dice similarity coefficient;bone-cartilage interface;feature extraction;knee;magnetic resonance images;median volume difference error;modified semiautomatic watershed algorithm;nonrigid registration;patient specific tissue estimation;quantitative analysis;tissue classification;Active shape model;Bones;Deformable models;Image analysis;Image databases;Image segmentation;Knee;Magnetic analysis;Magnetic resonance;Thickness measurement;Bone;cartilage;deformable models;knee;magnetic resonance imaging (MRI);nonrigid registration;quantitative analysis;segmentation;shape models;surface area;thickness;thickness models;tissue classification;validation;volume;watershed;Algorithms;Cartilage, Articular;Humans;Image Processing, Computer-Assisted;Knee Joint;Magnetic Resonance Imaging;Models, Biological;Reproducibility of Results}, 
+doi={10.1109/TMI.2009.2024743}, 
+ISSN={0278-0062},}
+
+
+
